@@ -1,0 +1,184 @@
+.main {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0a0a0c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: sans-serif;
+  color: #ffffff;
+}
+
+/* Background Glow Effects */
+.glow {
+  position: absolute;
+  width: 40vw;
+  height: 40vh;
+  filter: blur(120px);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.glowTop {
+  top: -10%;
+  left: -10%;
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.glowBottom {
+  bottom: -10%;
+  right: -10%;
+  background: rgba(57, 255, 20, 0.1);
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+/* Logo Styling */
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.logoGradientBorder {
+  padding: 1px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #00d4ff, #39ff14, #ff6700);
+}
+
+.logoInner {
+  background: #0a0a0c;
+  border-radius: 17px;
+  padding: 24px;
+}
+
+.logoImage {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.subtitle {
+  color: #39ff14;
+  font-size: 1.1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Launch Box */
+.launchBox {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 2.5rem;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+
+.launchLabel {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 2px;
+}
+
+.launchDate {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff6700;
+  font-style: italic;
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: #00d4ff;
+}
+
+.button {
+  background: #00d4ff;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.button:hover {
+  background: #00b8e6;
+  transform: scale(1.05);
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 1rem;
+}
+
+/* Success State */
+.successMessage {
+  padding: 2rem;
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  background: rgba(57, 255, 20, 0.05);
+  border-radius: 12px;
+}
+
+.successMessage h2 {
+  color: #39ff14;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .form {
+    flex-direction: column;
+  }
+}
